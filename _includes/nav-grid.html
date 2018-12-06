@@ -1,0 +1,38 @@
+<div class="weui-grids bg-white">
+	<a href="{{ site.baseurl }}/pages/manage/temperature.html" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em; {% if page.url contains 'temperature' %}color: #09BB07;{% endif %}"></text>
+		</div>
+		<p class="weui-grid__label {% if page.url contains 'temperature' %}success{% endif %}">温度</p>
+	</a>
+	<a href="{{ site.baseurl }}/pages/manage/humidity.html" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em; {% if page.url contains 'humidity' %}color: #09BB07;{% endif %}"></text>
+		</div>
+		<p class="weui-grid__label {% if page.url contains 'humidity' %}success{% endif %}">湿度</p>
+	</a>
+	<a href="{{ site.baseurl }}/pages/manage/co2.html" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em; {% if page.url contains 'co2' %}color: #09BB07;{% endif %}"></text>
+		</div>
+		<p class="weui-grid__label {% if page.url contains 'co2' %}success{% endif %}">二氧化碳</p>
+	</a>
+	<a href="javascript:;" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em;"></text>
+		</div>
+		<p class="weui-grid__label">PM2.5</p>
+	</a>
+	<a href="javascript:;" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em;"></text>
+		</div>
+		<p class="weui-grid__label">发电</p>
+	</a>
+	<a href="javascript:;" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em;"></text>
+		</div>
+		<p class="weui-grid__label">用电</p>
+	</a>
+</div>

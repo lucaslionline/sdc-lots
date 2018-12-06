@@ -1,0 +1,68 @@
+---
+layout: default
+title: "提交订单"
+---
+
+
+
+<div class="weui-panel">
+	<div class="weui-panel__bd">
+		<div class="weui-media-box weui-media-box_appmsg">
+			<div class="weui-media-box__hd coupon">3<sup>#</sup></div>
+			<div class="weui-media-box__bd">
+				<p>3<sup>#</sup>号地块</p>
+				<p class="weui-media-box__desc">
+					¥00,000.00
+					<span class="pull-right"><text class="iconfont icon-delete success"></text></span>
+				</p>
+			</div>
+		</div>
+
+
+		<div class="weui-media-box weui-media-box_appmsg">
+			<div class="weui-media-box__hd coupon">11<sup>#</sup></div>
+			<div class="weui-media-box__bd">
+				<p>11<sup>#</sup>号地块</p>
+				<p class="weui-media-box__desc">
+					¥00,000.00
+					<span class="pull-right"><text class="iconfont icon-delete success"></text></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="weui-cells">
+	<div class="weui-cell weui-cell_select weui-cell_select-after">
+		<div class="weui-cell__hd cell-prefix">支付方式</div>
+		<div class="weui-cell__bd">
+			<select class="weui-select" name="select2">
+				<option value="2" selected>余额支付</option>
+				<option value="3">微信支付</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--================= 提交订单 =================-->
+<div style="height: 50px;"></div>
+<div class="checkout-preview">
+	<div class="weui-form-preview__ft">
+		<a class="weui-form-preview__btn weui-form-preview__btn_default">
+			<span class="price-total">¥00,000.00</span>
+		</a>
+		<a class="weui-form-preview__btn weui-form-preview__btn_primary_fill" href="{{ site.baseurl }}/pages/pay-balance.html">
+			提交订单
+		</a>
+	</div>
+</div>

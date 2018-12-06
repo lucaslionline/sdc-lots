@@ -1,0 +1,27 @@
+<footer class="weui-footer_fixed-bottom">
+	<div class="weui-tabbar">
+		<a href="{{ site.baseurl }}/index.html" class="weui-tabbar__item {% if page.url contains 'index' %}weui-bar__item_on{% endif %}">
+			<text class="iconfont icon-home"></text>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+
+		<a href="{{ site.baseurl }}/pages/lots.html" class="weui-tabbar__item {% if page.url contains 'lots' %}weui-bar__item_on{% endif %}">
+			<text class="iconfont icon-cascades {% if page.url contains 'lots' %}success{% endif %}"></text>
+			<p class="weui-tabbar__label">赛队地块</p>
+		</a>
+
+		<a href="{{ site.baseurl }}/pages/manage/temperature.html" class="weui-tabbar__item {% if page.url contains 'manage' %}weui-bar__item_on{% endif %}">
+			<span style="display: inline-block; position: relative;">
+				<text class="iconfont icon-settings {% if page.url contains 'manage' %}success{% endif %}"></text>
+			</span>
+			<p class="weui-tabbar__label">监测管理</p>
+		</a>
+
+		<a href="{{ site.baseurl }}/pages/user.html" class="weui-tabbar__item {% if page.url contains 'user' %}weui-bar__item_on{% endif %}">
+			<span style="display: inline-block;position: relative;">
+				<text class="iconfont icon-my {% if page.url contains 'user' %}success{% endif %}"></text>
+			</span>
+			<p class="weui-tabbar__label">我的</p>
+		</a>
+	</div>
+</footer>

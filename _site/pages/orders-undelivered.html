@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+	<title>SDC赛场综合监控</title>
+	
+	
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/weui.css">
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/swiper.css">
+
+
+	<script src="/sdc-lots/assets/js/jquery-3.3.1.js"></script>
+	<script src="/sdc-lots/assets/js/swiper.min.js"></script>
+	<script src="/sdc-lots/assets/js/chart.js"></script>
+</head>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="weui-flex header-back">
+	<div class="weui-flex__item" style="text-align: left;">
+		<a href="javascript:history.back();">
+			<text class="iconfont icon-back" style="margin-left: 15px;"></text>
+		</a>
+	</div>
+	<div class="weui-flex__item text-overflow">待发货订单</div>
+	<div class="weui-flex__item"></div>
+</div>
+<div style="height: 40px;"></div>
+
+		<nav class="weui-flex nav-orders">
+	<div class="weui-flex__item ">
+		<a href="/sdc-lots/pages/orders-done.html">
+			<span style="display: inline-block; position: relative;">
+				已完成
+			</span>
+		</a>
+	</div>
+
+	<div class="weui-flex__item ">
+		<a href="/sdc-lots/pages/orders-unpaid.html">
+			<span style="display: inline-block; position: relative;">
+				待支付
+				<span class="weui-badge" style="position: absolute; top: 0.4em; right: -1em;">2</span>
+			</span>
+		</a>
+	</div>
+
+	<div class="weui-flex__item tab-current">
+		<a href="/sdc-lots/pages/orders-undelivered.html">
+			<span style="display: inline-block; position: relative;">
+				待发货
+			</span>
+		</a>
+	</div>
+
+	<div class="weui-flex__item ">
+		<a href="/sdc-lots/pages/orders-unreceived.html">
+			<span style="display: inline-block; position: relative;">
+				待收货
+			</span>
+		</a>
+	</div>
+</nav>
+
+<div style="height: 40px;"></div>
+
+<center class="gray">
+	<div class="icon-bg">
+		<text class="iconfont icon-text" style="font-size: 50px; color: #eee;"></text>
+	</div>
+	<p>您暂时没有任何待发货订单</p>
+</center>
+
+<div class="weui-btn-area">
+	<a href="/sdc-lots/pages/items.html" class="weui-btn weui-btn_primary"><text class="iconfont icon-goods"></text> 去商城逛逛</a>
+</div>
+
+
+		<footer class="weui-footer_fixed-bottom">
+	<div class="weui-tabbar">
+		<a href="/sdc-lots/index.html" class="weui-tabbar__item ">
+			<text class="iconfont icon-home"></text>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+
+		<a href="/sdc-lots/pages/lots.html" class="weui-tabbar__item ">
+			<text class="iconfont icon-cascades "></text>
+			<p class="weui-tabbar__label">赛队地块</p>
+		</a>
+
+		<a href="/sdc-lots/pages/manage/temperature.html" class="weui-tabbar__item ">
+			<span style="display: inline-block; position: relative;">
+				<text class="iconfont icon-settings "></text>
+			</span>
+			<p class="weui-tabbar__label">监测管理</p>
+		</a>
+
+		<a href="/sdc-lots/pages/user.html" class="weui-tabbar__item ">
+			<span style="display: inline-block;position: relative;">
+				<text class="iconfont icon-my "></text>
+			</span>
+			<p class="weui-tabbar__label">我的</p>
+		</a>
+	</div>
+</footer>
+
+	</div>
+</body>
+</html>

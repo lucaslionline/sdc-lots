@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+	<title>SDC赛场综合监控</title>
+	
+	
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/weui.css">
+	<link rel="stylesheet" type="text/css" href="/sdc-lots/assets/css/swiper.css">
+
+
+	<script src="/sdc-lots/assets/js/jquery-3.3.1.js"></script>
+	<script src="/sdc-lots/assets/js/swiper.min.js"></script>
+	<script src="/sdc-lots/assets/js/chart.js"></script>
+</head>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="weui-flex header-back">
+	<div class="weui-flex__item" style="text-align: left;">
+		<a href="javascript:history.back();">
+			<text class="iconfont icon-back" style="margin-left: 15px;"></text>
+		</a>
+	</div>
+	<div class="weui-flex__item text-overflow">监测管理</div>
+	<div class="weui-flex__item"></div>
+</div>
+<div style="height: 40px;"></div>
+
+		<div class="swiper-container" id="cover">
+	<div class="swiper-wrapper data-screen">
+		<div class="swiper-slide bg-success">
+			<div class="data-readings">
+				<p style="letter-spacing: .5em;">当前温度</p>
+				<div class="data-circle">
+					<span class="data-integer">25</span>.2 ℃
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide"><canvas id="temperature" width="100%" height="70"></canvas></div>
+	</div>
+	<!-- 如果需要分页器 -->
+	<div class="swiper-pagination"></div>
+</div>
+
+
+
+
+<div class="weui-grids bg-white">
+	<a href="/sdc-lots/pages/manage/temperature.html" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em; color: #09BB07;"></text>
+		</div>
+		<p class="weui-grid__label success">温度</p>
+	</a>
+	<a href="/sdc-lots/pages/manage/humidity.html" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em; "></text>
+		</div>
+		<p class="weui-grid__label ">湿度</p>
+	</a>
+	<a href="/sdc-lots/pages/manage/co2.html" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em; "></text>
+		</div>
+		<p class="weui-grid__label ">二氧化碳</p>
+	</a>
+	<a href="javascript:;" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em;"></text>
+		</div>
+		<p class="weui-grid__label">PM2.5</p>
+	</a>
+	<a href="javascript:;" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em;"></text>
+		</div>
+		<p class="weui-grid__label">发电</p>
+	</a>
+	<a href="javascript:;" class="weui-grid">
+		<div class="weui-grid__icon">
+			<text class="iconfont icon-settings icon-grid" style="font-size: 2em;"></text>
+		</div>
+		<p class="weui-grid__label">用电</p>
+	</a>
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var ctx = document.getElementById('temperature').getContext('2d');
+var chart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: ["8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30"],
+		datasets: [{
+			label: "温度",
+			borderColor: 'rgba(255,99,132,1)',
+			backgroundColor: 'rgba(255,99,132,0.2)',
+			borderWidth: 2,
+			pointBackgroundColor: 'rgba(255,255,255,1)',
+			data: [22.1, 23.2, 23.5, 23.4, 23.0, 22.9, 23.1, 23.5, 24.0, 24.5, 25.0, 25.2],
+		},
+		],
+	},
+	options: {}
+});
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var mySwiper = new Swiper ('#cover', {
+	direction: 'horizontal',
+	loop: true, // 循环模式选项
+	// 如果需要分页器
+	pagination: {
+		el: '.swiper-pagination',
+	},
+});    
+</script>
+
+
+		<footer class="weui-footer_fixed-bottom">
+	<div class="weui-tabbar">
+		<a href="/sdc-lots/index.html" class="weui-tabbar__item ">
+			<text class="iconfont icon-home"></text>
+			<p class="weui-tabbar__label">首页</p>
+		</a>
+
+		<a href="/sdc-lots/pages/lots.html" class="weui-tabbar__item ">
+			<text class="iconfont icon-cascades "></text>
+			<p class="weui-tabbar__label">赛队地块</p>
+		</a>
+
+		<a href="/sdc-lots/pages/manage/temperature.html" class="weui-tabbar__item weui-bar__item_on">
+			<span style="display: inline-block; position: relative;">
+				<text class="iconfont icon-settings success"></text>
+			</span>
+			<p class="weui-tabbar__label">监测管理</p>
+		</a>
+
+		<a href="/sdc-lots/pages/user.html" class="weui-tabbar__item ">
+			<span style="display: inline-block;position: relative;">
+				<text class="iconfont icon-my "></text>
+			</span>
+			<p class="weui-tabbar__label">我的</p>
+		</a>
+	</div>
+</footer>
+
+	</div>
+</body>
+</html>

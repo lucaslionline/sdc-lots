@@ -1,0 +1,73 @@
+---
+layout: default
+title: "监测管理"
+---
+
+
+
+<div class="swiper-container" id="cover">
+	<div class="swiper-wrapper data-screen">
+		<div class="swiper-slide bg-success">
+			<div class="data-readings">
+				<p style="letter-spacing: .5em;">当前温度</p>
+				<div class="data-circle">
+					<span class="data-integer">25</span>.2 ℃
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide"><canvas id="temperature" width="100%" height="70"></canvas></div>
+	</div>
+	<!-- 如果需要分页器 -->
+	<div class="swiper-pagination"></div>
+</div>
+
+
+
+
+{% include nav-grid.html %}
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var ctx = document.getElementById('temperature').getContext('2d');
+var chart = new Chart(ctx, {
+	type: 'line',
+	data: {
+		labels: ["8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30"],
+		datasets: [{
+			label: "温度",
+			borderColor: 'rgba(255,99,132,1)',
+			backgroundColor: 'rgba(255,99,132,0.2)',
+			borderWidth: 2,
+			pointBackgroundColor: 'rgba(255,255,255,1)',
+			data: [22.1, 23.2, 23.5, 23.4, 23.0, 22.9, 23.1, 23.5, 24.0, 24.5, 25.0, 25.2],
+		},
+		],
+	},
+	options: {}
+});
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var mySwiper = new Swiper ('#cover', {
+	direction: 'horizontal',
+	loop: true, // 循环模式选项
+	// 如果需要分页器
+	pagination: {
+		el: '.swiper-pagination',
+	},
+});    
+</script>
